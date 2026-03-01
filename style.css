@@ -1,0 +1,66 @@
+/* 1. Root Variables: Change these to re-theme the entire app */
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --accent: #6d5dfc;
+    --border-radius: 20px;
+    --transition: all 0.3s ease;
+}
+
+/* 2. Modern Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-gradient);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+}
+
+/* 3. The Weather Card (Glassmorphism) */
+.weather-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 4. Inputs & Buttons */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover { background: #5a4ad1; transform: translateY(-2px); }
+
+/* 5. Responsive Utility */
+@media (max-width: 480px) {
+    .weather-card { padding: 1.5rem; }
+    h2 { font-size: 1.5rem; }
+}
